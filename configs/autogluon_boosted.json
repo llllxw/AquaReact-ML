@@ -1,0 +1,43 @@
+{
+  "data_root": "/home/xwl/药物禁忌/元数据",
+  "output_root": "/home/xwl/药物禁忌/outputs/autogluon_boosted_run",
+  "feature_sets": "all",
+  "models": [
+    "AutoGluon"
+  ],
+  "ifs_models": [
+    "AutoGluon"
+  ],
+  "per_model_feature_selection": true,
+  "selector_method": "mrmr",
+  "selector_fallback": "mutual_info",
+  "ifs_metric": "AUC",
+  "ifs_reference_model": "AutoGluon",
+  "test_size": 0.2,
+  "validation_size": 0.2,
+  "random_seed": 42,
+  "ifs_step": 400,
+  "ifs_max_points": 40,
+  "skip_missing_models": true,
+  "skip_plots": false,
+  "autogluon_presets": "best_quality",
+  "autogluon_time_limit": 7200,
+  "autogluon_fit_kwargs": {
+    "num_bag_folds": 8,
+    "num_stack_levels": 2,
+    "dynamic_stacking": true,
+    "fit_strategy": "parallel",
+    "fit_weighted_ensemble": true,
+    "fit_full_last_level_weighted_ensemble": true
+  },
+  "autogluon_ifs_presets": "high_quality",
+  "autogluon_ifs_time_limit": 900,
+  "autogluon_ifs_fit_kwargs": {
+    "num_bag_folds": 5,
+    "num_stack_levels": 1,
+    "dynamic_stacking": false,
+    "fit_strategy": "parallel",
+    "fit_weighted_ensemble": true
+  },
+  "autogluon_retry_without_xgb": true
+}

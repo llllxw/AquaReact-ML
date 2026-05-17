@@ -1,0 +1,19 @@
+# Full dependency set for the fingerprint modeling pipeline on Python 3.12.
+# Recommended usage:
+#   python -m venv .venv
+#   source .venv/bin/activate
+#   python -m pip install -U pip setuptools wheel
+#   python -m pip install -r requirements.txt
+
+numpy>=1.26,<3
+pandas>=2.2,<3
+scikit-learn>=1.5,<2
+matplotlib>=3.9,<4
+mrmr-selection>=0.2.8
+# Pin xgboost to a version compatible with autogluon.tabular 1.5.0 and
+# with broader Linux wheel availability.
+xgboost==2.1.0
+catboost>=1.2.10,<2
+# Install the tabular module with the optional CatBoost/XGBoost backends only.
+# This is much lighter than `[all]` and is sufficient for the current pipeline.
+autogluon.tabular[catboost,xgboost]==1.5.0

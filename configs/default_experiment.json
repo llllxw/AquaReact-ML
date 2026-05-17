@@ -1,0 +1,40 @@
+{
+  "data_root": "/home/xwl/药物禁忌/元数据",
+  "output_root": "/home/xwl/药物禁忌/outputs/default_run",
+  "feature_sets": "all",
+  "models": [
+    "DT",
+    "RF",
+    "ExtraTrees",
+    "KNN",
+    "GB",
+    "XGBoost",
+    "CatBoost",
+    "AutoGluon"
+  ],
+  "ifs_models": [
+    "DT",
+    "RF",
+    "ExtraTrees",
+    "KNN",
+    "GB",
+    "XGBoost",
+    "CatBoost",
+    "AutoGluon"
+  ],
+  "per_model_feature_selection": true,
+  "selector_method": "mrmr",
+  "selector_fallback": "mutual_info",
+  "ifs_metric": "AUC",
+  "ifs_reference_model": "AutoGluon",
+  "test_size": 0.2,
+  "validation_size": 0.2,
+  "random_seed": 42,
+  "ifs_step": 200,
+  "ifs_max_points": 60,
+  "skip_missing_models": true,
+  "skip_plots": false,
+  "autogluon_presets": "medium_quality",
+  "autogluon_time_limit": null,
+  "autogluon_retry_without_xgb": true
+}

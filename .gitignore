@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Environments
+.venv/
+venv/
+env/
+.conda/
+
+# Generated outputs and model artifacts
+outputs/
+reports/
+catboost_info/
+*.log
+*.pt
+*.pth
+*.pkl
+*.joblib
+
+# Data and references
+data/
+external/
+元数据/
+参考文献/
+
+# Jupyter / editors / OS
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
