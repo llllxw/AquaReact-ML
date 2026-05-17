@@ -1,4 +1,4 @@
-# E+F+M AutoGluon Drug-Pair Contraindication Pipeline
+AquaReact-ML: an AutoGluon-based framework for prioritizing mild aqueous small-molecule reactant pairs
 
 This repository contains the code used for the final molecular-fingerprint
 modeling workflow in the drug-pair contraindication prediction study.
