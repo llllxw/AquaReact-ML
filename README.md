@@ -9,25 +9,6 @@ molecular fingerprint screening, pairwise representation comparison, mRMR-based
 feature selection, incremental feature selection, algorithm benchmarking,
 probability calibration, robustness evaluation, and model interpretation.
 
-Reactant pairs were curated from the Open Reaction Database. Reactions performed
-in water at 20-40 C were defined as the target class, and an equal number of
-pairs sampled from reactions conducted at temperatures of at least 100 C were
-used as high-temperature controls. The resulting balanced dataset contained
-16,464 reactant pairs and was divided into training, validation, and independent
-test sets comprising 10,536, 2,635, and 3,293 pairs, respectively. Model
-development was restricted to the training and validation sets, and the
-independent test set was reserved exclusively for final evaluation.
-
-Four molecular fingerprints and their combinations were evaluated with four
-pairwise encoding strategies, followed by benchmarking of seven conventional
-machine-learning algorithms and AutoGluon. The selected AquaReact-ML model,
-based on ECFP4, FCFP4, and MACCS fingerprints with direct concatenation,
-achieved an independent test AUROC of 0.903. Compound-disjoint and
-scaffold-based evaluations yielded AUROC values of 0.864 and 0.845,
-respectively, indicating moderate generalization to structurally distinct
-reactant pairs. Isotonic calibration improved probability reliability, and
-feature-importance analysis highlighted the dominant contribution of FCFP4 with
-complementary information from MACCS keys.
 
 ## Environment Requirement
 
