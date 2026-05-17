@@ -2,13 +2,12 @@
 
 ## Introduction
 
-AquaReact-ML is an AutoGluon-based machine-learning framework for identifying
-small-molecule reactant pairs associated with mild aqueous reaction conditions.
-The framework prioritizes compatible reactant pairs for earlier-stage reaction
-planning by combining molecular fingerprint screening, pairwise representation
-comparison, mRMR-based feature selection, incremental feature selection,
-algorithm benchmarking, probability calibration, robustness evaluation, and
-model interpretation.
+AquaReact-ML is an AutoGluon-based framework for prioritizing mild aqueous
+small-molecule reactant pairs. It identifies reactant pairs associated with mild
+aqueous reaction conditions and supports earlier-stage reaction planning through
+molecular fingerprint screening, pairwise representation comparison, mRMR-based
+feature selection, incremental feature selection, algorithm benchmarking,
+probability calibration, robustness evaluation, and model interpretation.
 
 Reactant pairs were curated from the Open Reaction Database. Reactions performed
 in water at 20-40 C were defined as the target class, and an equal number of
