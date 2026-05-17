@@ -60,6 +60,9 @@ environment manager before running the structure overview script.
 
 ## Source codes
 
+`data/combined-data.csv`: curated reactant-pair dataset used by the
+AquaReact-ML workflow.
+
 `configs/default_experiment.json`: baseline molecular-fingerprint experiment
 settings.
 

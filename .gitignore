@@ -24,7 +24,9 @@ catboost_info/
 *.joblib
 
 # Data and references
-data/
+data/*
+!data/
+!data/combined-data.csv
 external/
 元数据/
 参考文献/
