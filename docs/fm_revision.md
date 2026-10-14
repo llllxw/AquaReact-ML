@@ -7,7 +7,7 @@ not this revised dataset. Run all commands from the repository root.
 
 ## Data release
 
-Files are in `data/revision_20261007/`. No external workstation files are needed.
+Files are in `data/dataset/`. No external workstation files are needed.
 
 | File | Rows | Purpose |
 | --- | ---: | --- |

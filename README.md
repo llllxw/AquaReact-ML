@@ -20,9 +20,9 @@ the other scripts remain available as historical code.
 - Full cohort: **19,456 pairs = 4,964 positives + 14,492 high-temperature controls**.
 - Balanced modelling cohort: **9,928 pairs = 4,964 + 4,964** (seed 42).
 - Reserved controls: **9,528 pairs**, excluded from training and selection.
-- Data, membership and exact train/validation/test splits: [data/revision_20261007](data/revision_20261007).
+- Data, membership and exact train/validation/test splits: [data/dataset](data/dataset).
 - Complete ORD record associations, products, temperature and solvent information:
-  `data/revision_20261007/reaction_records.csv.gz`.
+  `data/dataset/reaction_records.csv.gz`.
 
 ```bash
 python3.12 -m venv .venv-fm

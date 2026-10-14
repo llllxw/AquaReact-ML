@@ -29,7 +29,7 @@ from sklearn.model_selection import KFold, train_test_split
 from threadpoolctl import threadpool_limits
 
 ROOT = Path(__file__).resolve().parents[1]
-DATA = ROOT / "data/revision_20261007"
+DATA = ROOT / "data/dataset"
 REFERENCE = ROOT / "reference/fm"
 CONFIG = ROOT / "configs/fm_revision.json"
 METRICS = [

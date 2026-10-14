@@ -28,8 +28,8 @@ catboost_info/
 data/*
 !data/
 !data/combined-data.csv
-!data/revision_20261007/
-!data/revision_20261007/**
+!data/dataset/
+!data/dataset/**
 external/
 元数据/
 参考文献/
