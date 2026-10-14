@@ -1,0 +1,13 @@
+# Revised F+M workflow; Python 3.12, CPU fits. Historical requirements.txt is unchanged.
+numpy==2.3.5
+pandas==2.3.3
+scipy==1.16.3
+scikit-learn==1.7.2
+rdkit==2026.3.1
+autogluon.tabular[lightgbm,catboost,xgboost,fastai]==1.5.0
+lightgbm==4.6.0
+xgboost==3.0.5
+catboost==1.2.10
+torch==2.7.1
+fastai==2.8.12
+threadpoolctl>=3.5,<4

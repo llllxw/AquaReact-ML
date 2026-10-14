@@ -1,0 +1,5 @@
+# Preserve the exact bytes covered by the frozen release SHA-256 manifest.
+/data/revision_20261007/** -text whitespace=cr-at-eol
+/reference/fm/** -text
+/configs/fm_revision.json -text
+/configs/fm_release_manifest.json -text

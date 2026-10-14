@@ -1,0 +1,12 @@
+{
+  "selected_k": 4239,
+  "validation_AUC": 0.9619803704820286,
+  "feature_set": "F+M",
+  "fold": 5,
+  "candidates": [
+    800,
+    3600,
+    4239
+  ],
+  "selection_basis": "independent validation only; refined candidates only"
+}

@@ -10,7 +10,40 @@ feature selection, incremental feature selection, algorithm benchmarking,
 probability calibration, robustness evaluation, and model interpretation.
 
 
-## Environment Requirement
+## Revised Dataset and F+M Training
+
+The revised manuscript uses **FCFP4 + MACCS (F+M) with AutoGluon** and shared
+non-stratified **outer five-fold cross-validation**, not the historical E+F+M
+single-split workflow below. This update is limited to data and F+M training;
+the other scripts remain available as historical code.
+
+- Full cohort: **19,456 pairs = 4,964 positives + 14,492 high-temperature controls**.
+- Balanced modelling cohort: **9,928 pairs = 4,964 + 4,964** (seed 42).
+- Reserved controls: **9,528 pairs**, excluded from training and selection.
+- Data, membership and exact train/validation/test splits: [data/revision_20261007](data/revision_20261007).
+- Complete ORD record associations, products, temperature and solvent information:
+  `data/revision_20261007/reaction_records.csv.gz`.
+
+```bash
+python3.12 -m venv .venv-fm
+source .venv-fm/bin/activate
+python -m pip install -U pip
+python -m pip install -r requirements-fm.txt
+python scripts/fm_autogluon.py verify
+python scripts/fm_autogluon.py prepare --workers 2
+python scripts/fm_autogluon.py train --workers 2 --threads 12 --selection rerun
+```
+
+Training performs fold-local mutual-information mRMR, validation-only two-stage
+IFS and final development-set refitting before each outer test evaluation.
+See [the reproduction guide](docs/fm_revision.md) for resource requirements,
+frozen-paper selection, checks, outputs and reproducibility limitations.
+The full hyperparameter profiles are stored in `configs/fm_revision.json`.
+
+**Do not use `data/combined-data.csv` or the commands below to reproduce the
+revised results.** They refer to the original submission and are preserved.
+
+## Historical Environment and Workflow
 
 The code has been checked under Python 3.12.7. The required packages are listed
 in `requirements.txt` and include the following:
